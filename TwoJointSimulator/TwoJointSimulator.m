@@ -20,4 +20,10 @@ pos = [0 0 0;    % Positions for joint 1 (always fixed y and rest zero)
 pos(1,:) = [0 lengths(1) 0];
 pos(2,:) = [cos(angle(1))*cos(angle(2)) sin(angle(2)) cos(angle(2))*sin(angle(1))]*lengths(2) + pos(1,:);
 
+% Plot the lines
+figure
+
+pos = [zeros(1,3); pos];
+plot3(pos(:,1), pos(:,3), pos(:,2));
+
 pos
